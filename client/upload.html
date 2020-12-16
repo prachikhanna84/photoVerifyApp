@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Verify Identity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+    <form action="/action_page.php">
+        <div class="row">
+            <div class="col-25">
+                <label for="pictures">Pictures</label>
+            </div>
+            <div class="col-75">
+                <input type="file" id="files" name="files[]" multiple />
+                <output id="list"></output>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="id">PhotoId</label>
+            </div>
+            <div class="col-75">
+                <input type="file" id="idFiles" name="idfiles"  />
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Upload Now">
+        </div>
+    </form>
+</div>
+
+
+<!--<form name="uploadForm">-->
+<!--    <div>-->
+<!--        Upload ID:-->
+<!--        <input id="uploadInput" type="file" name="myFiles">-->
+<!--        Upload 2 Selfies:-->
+<!--        <input type="file" id="files" name="files[]" multiple />-->
+<!--        <output id="list"></output>-->
+<!--    </div>-->
+<!--    <div><input type="submit" value="Send file"></div>-->
+<!--</form>-->
+
+<script src="upload.js"></script>
+</body>
+</html>
