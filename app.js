@@ -24,7 +24,7 @@ app.post('/data', function (req, res) {
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Authorization': 'Basic '
+      'Authorization': 'Basic YzA2OWFjMjEtN2YyNy00MTdhLWEyOTMtNzkzOTY5NWMyNzY0OmtSVWF1YzVTQitCakM5STdENXo2Q2s4Ng=='
     },
     data : data
   };
@@ -39,8 +39,9 @@ app.post('/data', function (req, res) {
   })
   .catch(function (error) {
 //    console.log(JSON.stringify("status is " , error.data));
-//    console.log(error);
-    res.send("No Match");
+    console.log(error.response.status);
+    console.log(error.response.data.Message);
+    res.send(error.response.statusText + ": " +error.response.data.Message);
   });
 
 });
