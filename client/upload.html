@@ -9,13 +9,13 @@
 <body>
 
 <div class="container">
-    <form action="/action_page.php">
+    <form method="post" id="upload">
         <div class="row">
             <div class="col-25">
                 <label for="pictures">Pictures</label>
             </div>
             <div class="col-75">
-                <input type="file" id="files" name="files[]" multiple />
+                <input type="file" id="files" name="files[]" multiple/>
                 <output id="list"></output>
             </div>
         </div>
@@ -24,26 +24,15 @@
                 <label for="id">PhotoId</label>
             </div>
             <div class="col-75">
-                <input type="file" id="idFiles" name="idfiles"  />
+                <input type="file" id="idFiles" name="idfiles"/>
             </div>
         </div>
         <div>
-            <input type="submit" id="submitButton" value="Upload Now">
+            <label id="response" hidden=true> </label>
         </div>
+        <input type="button" id="submit" value="Submit">
     </form>
 </div>
-
-
-<!--<form name="uploadForm">-->
-<!--    <div>-->
-<!--        Upload ID:-->
-<!--        <input id="uploadInput" type="file" name="myFiles">-->
-<!--        Upload 2 Selfies:-->
-<!--        <input type="file" id="files" name="files[]" multiple />-->
-<!--        <output id="list"></output>-->
-<!--    </div>-->
-<!--    <div><input type="submit" value="Send file"></div>-->
-<!--</form>-->
 
 <script src="upload.js"></script>
 </body>
