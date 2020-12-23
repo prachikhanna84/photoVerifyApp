@@ -1,2 +1,10 @@
 runtime: nodejs
 env: flex
+service: photoVerifyApp
+
+handlers:
+  - url: /index.html
+    static_files: client/index.html
+    upload: client/index.html
+  - url: /
+    static_dir: client/

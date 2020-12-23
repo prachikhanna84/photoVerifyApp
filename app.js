@@ -8,9 +8,9 @@ app.use(cors());
 
 app.use(bodyParser.urlencoded({ limit: '200mb',extended: true }));
 app.use(bodyParser.json({limit: '200mb'}));
+app.use(express.static('client'));
 
 app.get('/', function (req, res) {
-
 res.send("200");
 
 });
@@ -48,5 +48,6 @@ app.post('/data', function (req, res) {
 app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });
+
 
 

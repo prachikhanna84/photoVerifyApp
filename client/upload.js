@@ -70,7 +70,7 @@ function handleFileUpload(evt) {
 
     console.log("raw " , raw);
 
-    const url = 'http://localhost:8080/data';
+    const url = '/data';
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
