@@ -24,7 +24,7 @@ app.post('/data', function (req, res) {
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Authorization': 'Basic YzA2OWFjMjEtN2YyNy00MTdhLWEyOTMtNzkzOTY5NWMyNzY0OmtSVWF1YzVTQitCakM5STdENXo2Q2s4Ng=='
+      'Authorization': 'Basic '
     },
     data : data
   };
@@ -45,8 +45,8 @@ app.post('/data', function (req, res) {
   });
 
 });
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(8080, function () {
+  console.log('Example app listening on port 8080!');
 });
 
 
