@@ -22,7 +22,7 @@ Step6: eb deploy
 Step7: eb open
 Step8: eb logs
 
-Note*: Elasticbeanstalk uses nginx as reverse proxy server which by default runs on 8081 port and hence we need to
-use the default port for server
+Note*: Elasticbeanstalk uses nginx as reverse proxy server. Always look for eb logs, in this scenario nginx is passing
+request to port 8081 and hence i needed to change my node server to port 8081.
 
 
