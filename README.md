@@ -25,4 +25,8 @@ Step8: eb logs
 Note*: Elasticbeanstalk uses nginx as reverse proxy server. Always look for eb logs, in this scenario nginx is passing
 request to port 8081 and hence i needed to change my node server to port 8081.
 
+Also I was getting Http 413 error due to the size of the request body. The deafutl nginx size was small 
+and hence i have to configure that by setting client_max_body_size 20M; in 01_files.config file  under .ebextentions.
+
+
 
