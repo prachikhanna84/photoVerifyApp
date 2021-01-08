@@ -20,7 +20,7 @@ app.post('/data', function (req, res) {
 
   var config = {
     method: 'post',
-    url: 'https://bws.bioid.com/extension/photoverify',
+    url: 'https://bws.bioid.com/extension/photoverify2?accuracy=5',
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
@@ -33,9 +33,14 @@ app.post('/data', function (req, res) {
   .then(function (response) {
 //    console.log(JSON.stringify(response));
 //    console.log(JSON.stringify(response.data));
-    console.log(JSON.stringify(response.status));
-    res.send("Success Match");
-
+//    console.log(JSON.stringify(response.data.AccuracyLevel));
+//    console.log(JSON.stringify(response.status));
+    if(response.data.Success) {
+        res.send("Success Match - Accuracy Level " + response.data.AccuracyLevel);
+    }
+    else{
+        res.send("Low Accuracy Level " + response.data.AccuracyLevel);
+    }
   })
   .catch(function (error) {
 //    console.log(JSON.stringify("status is " , error.data));

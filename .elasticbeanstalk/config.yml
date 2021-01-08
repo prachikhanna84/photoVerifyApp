@@ -1,6 +1,6 @@
 branch-defaults:
   main:
-    environment: node-express-env
+    environment: null
     group_suffix: null
 global:
   application_name: photoVerifyApp
